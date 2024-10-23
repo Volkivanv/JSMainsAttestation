@@ -281,5 +281,23 @@ const productsNew = [
 
     const productMoreZeroPhoto = productsNew.filter(prod => prod.photos && prod.photos.length > 0);
 
-    
+
     console.log(`продукты с фото:`, productMoreZeroPhoto);
+
+//     Задание 5 Необязательное задание
+// Описание задачи: Есть два массива en и ru. Объедините их в объект, где значения из
+// первого массива будут ключами, а значения из второго массива — значениями.
+
+const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+const ru = ["понедельник", "вторник", "среда", "четверг", "пятница",
+"суббота", "воскресенье"];
+
+const weekDays = {};
+if(en.length === ru.length){
+    for (let i = 0; i < en.length; i++) {
+        weekDays[en[i]] = ru[i];
+    }
+    console.log(weekDays);
+} else {
+    console.log('Эти массивы нельзя объединить в объект по принципу ключ: значение');
+}
