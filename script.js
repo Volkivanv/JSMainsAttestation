@@ -163,7 +163,10 @@
 // let num = 1 + Math.round(Math.random());
 // riddles.askQuestion(num);
 
-//1
+//Задание 1
+// Описание задачи: Дан объект numbers. Необходимо вывести в консоль все значения,
+// которые больше или равны 3.
+
 const numbers = {
     'keyin1': 1,
     'keyin2': 2,
@@ -182,7 +185,10 @@ for (const key in numbers) {
     }
 }
 
-//2
+//Задание 2
+// Описание задачи: Из объекта post, который задан в константе, выведите значения с
+// комментариями в консоль.
+
 const post = {
     author: "John", // вывести этот текст
     postId: 23,
@@ -221,7 +227,9 @@ const post = {
     }
 
 
-//3
+//Задание 3
+// Описание задачи: Дан массив products. Уменьшите цену каждого продукта на 15% с
+// использованием метода forEach.
 
 const products = [
     {
@@ -242,3 +250,36 @@ products.forEach(element => {
     element.price*=0.85;
 });
 console.log(products);
+
+// Задание 4
+// Описание задачи:
+// 1. Выведите в консоль массив продуктов, у которых есть хотя бы одна
+// фотография, используя метод filter.
+// 2. Отсортируйте массив products по цене
+
+const productsNew = [
+    {
+    id: 3,
+    price: 127,
+    photos: ["1.jpg", "2.jpg"],
+    },
+    {
+    id: 5,
+    price: 499,
+    photos: [],
+    },
+    {
+    id: 10,
+    price: 26,
+    photos: ["3.jpg"],
+    },
+    {
+    id: 8,
+    price: 78,
+    },
+    ];
+
+    const productMoreZeroPhoto = productsNew.filter(prod => prod.photos && prod.photos.length > 0);
+
+    
+    console.log(`продукты с фото:`, productMoreZeroPhoto);
