@@ -181,3 +181,44 @@ for (const key in numbers) {
         }
     }
 }
+
+//2
+const post = {
+    author: "John", // вывести этот текст
+    postId: 23,
+    comments: [
+        {
+            userId: 10,
+            userName: "Alex",
+            text: "lorem ipsum",
+            rating: {
+            likes: 10,
+            dislikes: 2, // вывести это число
+        },
+        },
+        {
+            userId: 5, // вывести это число
+            userName: "Jane",
+            text: "lorem ipsum 2", // вывести этот текст
+            rating: {
+            likes: 3,
+            dislikes: 1,
+        },
+        },
+        ],
+    };
+
+    console.log(post.author);
+    for (const key in post.comments) {
+        if (Object.prototype.hasOwnProperty.call(post.comments, key)) {
+            const element = post.comments[key];
+            for (const key in element) {
+                if (Object.prototype.hasOwnProperty.call(element, key)) {
+                    console.log(element[key]);
+                }
+            }
+        }
+    }
+
+
+//3
